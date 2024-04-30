@@ -28,4 +28,4 @@ class LimitOffsetOrderingGraphqlPagination(LimitOffsetGraphqlPagination):
 
         offset = kwargs.get(self.offset_query_param, 0)
 
-        return qs[offset: offset + fabs(limit)]
+        return qs[offset: offset + int(fabs(limit))]
